@@ -1,0 +1,97 @@
+/* Gummie Page Styles */
+body {
+  background-color: #0d261e; /* Dark green background */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f4029; /* Slightly darker green for header */
+  color: #92c47c; /* Light green for text */
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.page-container {
+  display: flex;
+  margin: 20px;
+}
+
+.filters {
+  flex: 1;
+  background-color: #133a2b; /* Dark green for filters section */
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.filters h2, .filters h3 {
+  color: #92c47c; /* Light green for headings */
+}
+
+.filters label {
+  color: #fff;
+  font-size: 14px;
+}
+
+.products {
+  flex: 3;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allows products to wrap on smaller screens */
+}
+
+.product {
+  border: 2px solid #133a2b; /* Border matches filters section */
+  padding: 10px;
+  max-width: 200px;
+  box-sizing: border-box;
+  text-align: center;
+  flex: 1 1 180px; /* Responsive width for products */
+  background-color: #0f4029; /* Match header background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add slight shadow for depth */
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 2px solid #133a2b; /* Border below the image */
+  border-radius: 4px;
+}
+
+.product h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.product p {
+  font-size: 16px;
+  color: #92c47c; /* Light green for price */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .page-container {
+      flex-direction: column;
+  }
+
+  .filters {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .product {
+      width: 100%; /* Products take full width on smaller screens */
+  }
+}

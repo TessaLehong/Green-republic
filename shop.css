@@ -1,0 +1,216 @@
+/* Shop Page Styles */
+.shop {
+    padding: 50px 10%;
+    background-color: #0d261e; /* Dark green background */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    height: 1000vh;
+}
+
+.shop h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #92c47c; /* Light green for heading */
+}
+
+.shop h2{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    margin-top: 50px; /* Space above the heading */
+}
+.products {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow products to wrap on smaller screens */
+}
+
+.candy{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow products to wrap on smaller screens */
+}
+
+.baked{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap; /* Allow products to wrap on smaller screens */
+}
+
+.chocolate{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow products to wrap on smaller screens */
+}
+
+.indica{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow products to wrap on smaller screens*/
+}
+
+.strains{
+display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow products to wrap on smaller scr*/
+}
+
+.hybrid{
+display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow products to wrap on smaller scr*/
+}
+.product {
+    border: 5px solid #333; /* Adds a border around the product */
+    padding: 10px;
+    max-width: 250px;
+    box-sizing: border-box;
+    text-align: center;
+    flex: 1 1 200px; /* Makes sure products are responsive and take up equal space */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image is cropped to fit the size */
+    border-bottom: 2px solid #333; /* Adds a border below the image */
+}
+
+.product h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.product h4 {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.product p {
+    font-size: 16px;
+    color: #92c47c;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay */
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #0d261e; /* Dark green */
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 500px; 
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #92c47c; /* Light green */
+}
+
+.modal-subtitle {
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.input-group input,
+.input-group label {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 13px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.btn-green {
+    background-color: #92c47c; /* Light green */
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-green:hover {
+    background-color: #75a85f; /* Slightly darker green */
+}
+
+.google-login {
+    background-color: #4285f4; /* Google blue */
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+.google-login:hover {
+    background-color: #357ae8; /* Darker Google blue */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.switch-modal {
+    margin-top: 15px;
+    color: #92c47c;
+}
+
+.switch-modal a {
+    color: #75a85f;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+
+
+    .product {
+        width: 100%; /* Ensures products take full width on small screens */
+    }
+}

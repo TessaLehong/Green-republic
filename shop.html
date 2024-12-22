@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <section class="shop">
+        <h1>Welcome to Our Shop</h1>
+      
+        <!-- Public Products -->
+        <div class="products public-products">
+          
+          <div class="product">
+            <img src="Screenshot 2024-12-11 110052.png" alt="Product 1">
+            <h3>Brownies</h3>
+            <h4>Your classic style Freshly baked Space Brownies for that trip to outer space you need, Infused to perfection.
+                </h4>
+            <p>150 mg - R180.00</p>
+          </div>
+          <div class="product">
+            <img src="Screenshot 2024-12-11 104010.png" alt="Product 2">
+            <h3>Gummy Bears </h3>
+            <h4>A bag of Rainbow Fruity Flavoured
+                Gummy Bears, dosed to Perfection</h4>
+            <p>150mg-R180.00
+                330mg-R400.00
+            </p>
+          </div>
+          <div class="product">
+            <img src="Screenshot 2024-12-11 104037.png" alt="Product 2">
+            <h3>Coconut Milk Choc Wheels </h3>
+            <h4>Featuring luscious coconut-infused
+                chocolate Wheels with a creamy texture,
+                making for a delectable and wholesome
+                treat.</h4>
+            <p>100mg - R240
+            </p>
+          </div>
+        </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 class="modal-title">Welcome Back!</h3>
+            <p class="modal-subtitle">Log in to access exclusive products</p>
+            <form id="login-form" action="/login" method="POST">
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn-green">Log In</button>
+            </form>
+            <p class="alternative">Or log in with:</p>
+            <button class="google-login">Google</button>
+            <p class="switch-modal">Don't have an account? <a href="#" onclick="showSignUpModal(event)">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signup-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 class="modal-title">Create Your Account</h3>
+            <p class="modal-subtitle">Sign up to explore exclusive deals</p>
+            <form id="register-form" action="/upload-id" method="POST" enctype="multipart/form-data" onsubmit="return checkAge()">
+                <div class="input-group">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+                <div class="input-group">
+                    <label for="id-upload">Upload ID (JPG/PNG):</label>
+                    <input type="file" name="id-upload" id="id-upload" accept="image/png, image/jpeg" required>
+                </div>
+                <p>
+                    <label>
+                        <input type="checkbox" id="age-confirmation" required> I confirm that I am 18 years or older.
+                    </label>
+                </p>
+                <button type="submit" class="btn-green">Sign Up</button>
+            </form>
+            <p class="switch-modal">Already have an account? <a href="#" onclick="showLoginModal(event)">Log In</a></p>
+        </div>
+    </div>
+
+    <script src="shop.js"></script>
+</body>
+</html>

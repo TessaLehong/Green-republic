@@ -1,0 +1,291 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #000; /* Black background */
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #0f100f; /* Green header background */
+  }
+  
+  header .logo h1 {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  header .logo span {
+    color: #7CFC00; /* Light green accent for "Dispensary" */
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  header nav ul li a:hover {
+    color: #7CFC00; /* Hover effect with light green */
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: url('2h-media-_OQTRcqCZWM-unsplash.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+  }
+  
+  .hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #7CFC00; /* Light green text */
+    font-weight: bold;
+  }
+  
+  .hero p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    background-color: #7CFC00; /* Light green button */
+    color: #000;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #5cb85c; /* Darker green hover effect */
+  }
+  
+  /* About Us Section */
+.about-us {
+    padding: 50px 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d261e; /* Dark green background */
+  }
+  
+  .about-us .container {
+    display: flex;
+    gap: 40px;
+    flex-wrap:nowrap wrap;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 20px;
+  }
+  
+  .about-content {
+    max-width: 600px;
+  }
+  
+  .about-content h2 {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d9d9d9; /* Light gray for text */
+    margin-bottom: 20px;
+  }
+
+  .inventory-container {
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    max-width: 90%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background:#0f4029;
+  }
+
+  .inventory-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .inventory-item {
+    flex: 0 0 20%; /* Adjust to control how many items are visible at once */
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .inventory-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .inventory-item p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f2eaea;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+  }
+
+  .arrow.left {
+    left: 10px;
+  }
+
+  .arrow.right {
+    right: 10px;
+  }
+
+  .arrow:hover {
+    background-color: #ddd;
+  }
+  /* Contact Us Section */
+.contact-us {
+    padding: 50px 10%;
+    background-color: #0d261e; /* Dark green background */
+    color: #fff;
+  }
+  
+  .contact-us .container {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .contact-info {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .contact-info h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #d9d9d9; /* Light gray for paragraph text */
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+  
+  .contact-info li strong {
+    color: #92c47c; /* Light green for emphasis */
+  }
+  
+  .contact-form {
+    flex: 1;
+    max-width: 45%;
+  }
+  
+  .contact-form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #92c47c; /* Light green for form heading */
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #0d261e;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #92c47c; /* Light green button */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #75a85f; /* Darker green on hover */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .contact-us .container {
+      flex-direction: column;
+    }
+  
+    .contact-info,
+    .contact-form {
+      max-width: 100%;
+    }
+  }
+  

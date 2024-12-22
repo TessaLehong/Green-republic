@@ -1,0 +1,138 @@
+/* General Page Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d261e; /* Dark green background */
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #092015; /* Slightly darker green for the header */
+  color: #92c47c; /* Light green for text */
+  border-bottom: 5px solid #92c47c; /* Light green border */
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+/* Page Layout */
+.page-container {
+  display: flex;
+  gap: 20px;
+  margin: 20px 10%;
+}
+
+/* Filters Section */
+.filters {
+  width: 25%;
+  background-color: #092015;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.filters h2 {
+  font-size: 24px;
+  color: #92c47c;
+  text-align: center;
+}
+
+.filters h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.filters label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Products Section */
+.products {
+  width: 75%;
+}
+
+.product-grid h1 {
+  text-align: center;
+  font-size: 30px;
+  color: #92c47c;
+  margin-bottom: 30px;
+}
+
+.product-grid h2 {
+  font-size: 24px;
+  margin: 40px 0 20px;
+  color: #92c47c;
+}
+
+/* Product Layout */
+.strains,
+.indica,
+.hybrid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Make products responsive */
+}
+
+.product {
+  border: 5px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  max-width: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #0f2d21; /* Darker green background */
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  font-size: 18px;
+  color: #fff;
+  margin: 10px 0;
+}
+
+.product p {
+  font-size: 16px;
+  color: #92c47c;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .page-container {
+      flex-direction: column;
+  }
+
+  .filters {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .products {
+      width: 100%;
+  }
+
+  .product {
+      flex: 1 1 calc(50% - 20px);
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product {
+      flex: 1 1 100%;
+  }
+}

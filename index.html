@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Republic</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>CANNABIS <span>DISPENSARY</span></h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product.html">Exclusive </a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>CITY'S BEST CANNABIS</h2>
+      <p>Dispensary & Delivery</p>
+      <a href="#" class="btn">View Shop</a>
+    </div>
+  </section>
+
+  <section class="about-us">
+    <div class="container">
+      <div class="about-image">
+        <img src="2h-media-cDyJT_ghrMw-unsplash.jpg" alt="Cannabis Plant">
+      </div>
+      <div class="about-content">
+        <h2>Why choose us </h2>
+        <p>
+            At Green Republic, we are dedicated to delivering premium cannabis products crafted
+             with care and precision. Our mission is to enhance wellness and balance by offering pure,
+              responsibly sourced products that meet the highest standards of quality. Every step of
+               our process, from cultivation to extraction, reflects our commitment to sustainability
+                and transparency.
+        </p>
+        <p>
+            We believe in the power of nature to heal and inspire. That’s why our range of products, 
+            including CBD oils, edibles, and premium flower, is designed to support your wellness 
+            journey with consistency and care. Whether you’re seeking relaxation, relief, or rejuvenation,
+             Green Republic is here to provide you with trusted solutions for everyday balance.
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="slide">
+    <div class="inventory-container">
+      <button class="arrow left" onclick="slideLeft()">&#10094;</button>
+      <div class="inventory-slider" id="slider">
+        <div class="inventory-item">
+          <a href="flowers.html">
+            <img src="flowers.jpg" alt="Flower">
+            <p>Flower</p>
+          </a>
+        </div>
+        <div class="inventory-item">
+          <a href="vapes.html">
+            <img src="indica 1.png" alt="Vapes">
+            <p>Vapes</p>
+          </a>
+        </div>
+        <div class="inventory-item">
+          <a href="gummy.html">
+            <img src="green apple gummies.png" alt="Edibles">
+            <p>Gummies</p>
+          </a>
+        </div>
+        <div class="inventory-item">
+          <a href="roll.html">
+            <img src="roll.jpg" alt="Prerolls">
+            <p>Prerolls</p>
+          </a>
+        </div>
+        <div class="inventory-item">
+          <a href="baked.html">
+            <img src="cookie.png" alt="Baked">
+            <p>Baked</p>
+          </a>
+        </div>
+        <div class="inventory-item">
+          <a href="candy.html">
+            <img src="stocksweets.png" alt="Candy">
+            <p>Candy</p>
+          </a>
+        </div>
+        <div class="inventory-item">
+          <a href="chocolate.html">
+            <img src="Screenshot 2024-12-19 201511.png" alt="Chocolates">
+            <p>Chocolates</p>
+          </a>
+        </div>
+      </div>
+      <button class="arrow right" onclick="slideRight()">&#10095;</button>
+    </div>
+  </section>
+  
+  <section class="contact-us">
+    <div class="container">
+      <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to reach out.</p>
+        <ul>
+          <li><strong>Address:</strong> Block 5 Fountain Grove ,  5 2nd Rd, Hyde Park, Sandton, 2191</li>
+          <li><strong>Phone:</strong> (+27) 87 150 4628</li>
+          <li><strong>Email:</strong> greenrepublic.com</li>
+          <li><strong>Hours:</strong> Mon - Sat: 8 AM - 6PM</li>
+        </ul>
+      </div>
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script>
+    const slider = document.getElementById('slider');
+    let scrollPosition = 0;
+
+    function slideLeft() {
+      scrollPosition -= 300; // Adjust scroll amount as needed
+      if (scrollPosition < 0) {
+        scrollPosition = 0;
+      }
+      slider.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+
+    function slideRight() {
+      scrollPosition += 300; // Adjust scroll amount as needed
+      if (scrollPosition > slider.scrollWidth - slider.offsetWidth) {
+        scrollPosition = slider.scrollWidth - slider.offsetWidth;
+      }
+      slider.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+  </script>
+</body>
+</html>

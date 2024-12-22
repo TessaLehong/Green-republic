@@ -1,0 +1,106 @@
+/* Candy Page Styles */
+body {
+  background-color: #0d261e; /* Dark green background */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f4029; /* Slightly darker green for header */
+  color: #92c47c; /* Light green for text */
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.page-container {
+  display: flex;
+  margin: 20px;
+}
+
+.filters {
+  flex: 1;
+  background-color: #133a2b; /* Darker green for filters section */
+  padding: 20px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.filters h2, .filters h3 {
+  color: #92c47c; /* Light green for headings */
+}
+
+.filters label {
+  color: #fff;
+  font-size: 14px;
+}
+
+.products {
+  flex: 3;
+}
+
+.product-item {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Allow products to wrap on smaller screens */
+}
+
+.product-item {
+  border: 5px solid #333; /* Adds a border around the product */
+  padding: 10px;
+  max-width: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  flex: 1 1 200px; /* Makes products responsive */
+  background-color: #133a2b; /* Match filters section */
+  border-radius: 8px;
+}
+
+.product-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image is cropped to fit the size */
+  border-bottom: 2px solid #333; /* Adds a border below the image */
+  border-radius: 4px;
+}
+
+.product-item h4 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.product-item p {
+  font-size: 16px;
+  color: #92c47c; /* Light green for price */
+}
+
+.discounted-price {
+  font-weight: bold;
+  color: #92c47c; /* Light green for discounted price */
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #aaa; /* Grey for original price */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .page-container {
+      flex-direction: column;
+  }
+
+  .filters {
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .product-item {
+      width: 100%; /* Products take full width on smaller screens */
+  }
+}
